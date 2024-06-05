@@ -12,46 +12,46 @@ const Success = () => {
         <table>
           <tbody>
             <tr>
-              <td>First Name:</td>
+              <td><strong>First Name:</strong></td>
               <td>{formData.firstName}</td>
             </tr>
             <tr>
-              <td>Last Name:</td>
+              <td><strong>Last Name:</strong></td>
               <td>{formData.lastName}</td>
             </tr>
             <tr>
-              <td>Username:</td>
+              <td><strong>Username:</strong></td>
               <td>{formData.username}</td>
             </tr>
             <tr>
-              <td>Email:</td>
+              <td><strong>Email:</strong></td>
               <td>{formData.email}</td>
             </tr>
             <tr>
-              <td>Password:</td>
+              <td><strong>Password:</strong></td>
               <td>{formData.password}</td>
             </tr>
             <tr>
-              <td>Phone Number:</td>
+              <td><strong>Phone Number:</strong></td>
               <td>{formData.phone}</td>
             </tr>
             <tr>
-              <td>Country:</td>
+              <td><strong>Country:</strong></td>
               <td>{formData.country}</td>
             </tr>
             <tr>
-              <td>City:</td>
+              <td><strong>City:</strong></td>
               <td>{formData.city}</td>
             </tr>
             <tr>
-              <td>Pan No.:</td>
+              <td><strong>Pan No.:</strong></td>
               <td>{formData.pan}</td>
             </tr>
             <tr>
-              <td>Aadhar No.:</td>
+              <td><strong>Aadhar No.:</strong></td>
               <td>{formData.aadhar}</td>
             </tr>
-            {/* Add more rows for additional form fields */}
+          
           </tbody>
         </table>
       </div>

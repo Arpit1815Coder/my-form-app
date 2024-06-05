@@ -5,7 +5,7 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #dbbcbc;
+    background-color: rgba(255, 255, 255, 0.671);
     
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -26,6 +26,7 @@ form {
   form input,
   form select {
     width: 80%;
+    background-color: rgba(201, 238, 251, 0.308);
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;

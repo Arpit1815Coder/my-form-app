@@ -1,18 +1,21 @@
 /* Add CSS for Success component */
 table {
+    
     border-collapse: collapse;
     width: 50%;
     margin: auto;
     font-family:Helvetica;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.32);
   }
   
   table, th, td {
     border: 1px solid #bf7f7f;
-    background-color: rgba(173, 216, 230, 0.466);
+    background-color: rgba(173, 216, 230, 0.279);
+   
   } 
   
   th, td {
-    padding: 8px;
+    padding: 15px;
   }
   
   th {

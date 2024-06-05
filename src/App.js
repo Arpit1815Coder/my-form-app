@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app-container">
       <nav className="nav-bar">
-      <h5>Click here to open form</h5>
+      <h5>Click on Form to open</h5>
         <Link to="/form" className="nav-link">Form</Link>
         
       </nav>
