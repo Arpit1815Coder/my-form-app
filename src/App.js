@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import './App.css';
 
 const App = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/form">Form</Link>
+    <div className="app-container">
+      <nav className="nav-bar">
+      <h5>Click here to open form</h5>
+        <Link to="/form" className="nav-link">Form</Link>
+        
       </nav>
       <Outlet />
     </div>

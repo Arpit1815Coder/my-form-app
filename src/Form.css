@@ -1,0 +1,125 @@
+/* Center the form on the screen and set its width to 70% */
+form {
+    
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #dbbcbc;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style form elements */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 7%;
+    
+  }
+  
+  form input,
+  form select {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 7%;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    width: 70%;
+    border: none;
+    
+   
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #394a3c;
+  }
+
+   /* Style for the button and center it */
+.button-container {
+  display: flex;
+ 
+  justify-content: center;
+ 
+}
+  
+  /* Error message style */
+  span {
+    color: red;
+    font-size: 7px;
+    margin-left: 7%;
+  }
+  
+  /* Style for success message */
+  .success-container {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: lightblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .success-container h1 {
+    text-align: center;
+    color: #28a745;
+  }
+  
+  /* Style for displaying form data in table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+ 
+/* Style for the password container to include the eye icon */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 30px); /* Adjusted width */
+}
+
+.password-container input {
+  width: calc(100% - 45px); /* Adjusted width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #888;
+}
+
+  

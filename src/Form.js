@@ -2,7 +2,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './Form.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 
 const Form = () => {
@@ -23,10 +25,10 @@ const Form = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const countries = ["Country1", "Country2"]; // Replace with actual country list
+  const countries = ["India", "USA"]; // Replace with actual country list
   const cities = {
-    Country1: ["City1-1", "City1-2"],
-    Country2: ["City2-1", "City2-2"]
+    India: ["Ghaziabad", "Noida"],
+    USA: ["Las Vegas", "Los Angles"]
   }; // Replace with actual city list
 
   const handleChange = (e) => {
@@ -62,6 +64,22 @@ const Form = () => {
       navigate('/success');
     }
   };
+
+  const handleReset = () => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      username: '',
+      email: '',
+      password: '',
+      phone: '',
+      country: '',
+      city: '',
+      pan: '',
+      aadhar: ''
+    });
+    setErrors({});
+  };
   
 
   return (
@@ -88,10 +106,14 @@ const Form = () => {
       </div>
       <div>
         <label>Password</label>
-        <input type={showPassword ? "text" : "password"} name="password" value={formData.password} onChange={handleChange} />
-        <button type="button" onClick={() => setShowPassword(!showPassword)}>
-          {showPassword ? "Hide" : "Show"}
-        </button>
+        <div className="password-container">
+          <input type={showPassword ? "text" : "password"} name="password" value={formData.password} onChange={handleChange} />
+          <FontAwesomeIcon
+            icon={showPassword ? faEyeSlash : faEye}
+            onClick={() => setShowPassword(!showPassword)}
+            className="eye-icon"
+          />
+        </div>
         {errors.password && <span>{errors.password}</span>}
       </div>
       <div>
@@ -101,7 +123,7 @@ const Form = () => {
       </div>
       <div>
         <label>Country</label>
-        <select name="country" value={formData.country} onChange={handleChange}>
+        <select name="country" value={formData.country} onChange={handleChange} style={{ width: '85%' }} >
           <option value="">Select Country</option>
           {countries.map((country) => (
             <option key={country} value={country}>{country}</option>
@@ -111,9 +133,9 @@ const Form = () => {
       </div>
       <div>
         <label>City</label>
-        <select name="city" value={formData.city} onChange={handleChange}>
+        <select name="city" value={formData.city} onChange={handleChange} style={{ width: '85%' }}  >
           <option value="">Select City</option>
-          {formData.country && cities[formData.country].map((city) => (
+          {formData.country && cities[formData.country]?.map((city) => (
             <option key={city} value={city}>{city}</option>
           ))}
         </select>
@@ -129,7 +151,18 @@ const Form = () => {
         <input type="text" name="aadhar" value={formData.aadhar} onChange={handleChange} />
         {errors.aadhar && <span>{errors.aadhar}</span>}
       </div>
-      <button type="submit">Submit</button>
+
+      <div className="button-container">
+      <button type="button" onClick={handleReset}>Reset</button>
+        
+      </div>
+      
+      <div className="button-container">
+        <button type="submit">Submit</button>
+        
+      </div>
+      
+     
     </form>
   );
 };

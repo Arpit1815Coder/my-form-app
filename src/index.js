@@ -5,6 +5,8 @@ import App from './App.js';
 import Form from './Form.js';
 import Success from './Success.js';
 import './index.css';
+import './App.css';
+import './success.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

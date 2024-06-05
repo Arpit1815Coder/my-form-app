@@ -1,4 +1,3 @@
-// Success.js
 import React from 'react';
 
 const Success = () => {
@@ -10,18 +9,51 @@ const Success = () => {
     return (
       <div>
         <h1>Submission Successful</h1>
-        <div>
-          <p>First Name: {formData.firstName}</p>
-          <p>Last Name: {formData.lastName}</p>
-          <p>Username: {formData.username}</p>
-          <p>Email: {formData.email}</p>
-          <p>Password: {formData.password}</p>
-          <p>Phone: {formData.phone}</p>
-          <p>Country: {formData.country}</p>
-          <p>City: {formData.city}</p>
-          <p>Pan No: {formData.pan}</p>
-          <p>Aadhar No: {formData.aadhar}</p>
-        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>First Name:</td>
+              <td>{formData.firstName}</td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td>{formData.lastName}</td>
+            </tr>
+            <tr>
+              <td>Username:</td>
+              <td>{formData.username}</td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td>{formData.email}</td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>{formData.password}</td>
+            </tr>
+            <tr>
+              <td>Phone Number:</td>
+              <td>{formData.phone}</td>
+            </tr>
+            <tr>
+              <td>Country:</td>
+              <td>{formData.country}</td>
+            </tr>
+            <tr>
+              <td>City:</td>
+              <td>{formData.city}</td>
+            </tr>
+            <tr>
+              <td>Pan No.:</td>
+              <td>{formData.pan}</td>
+            </tr>
+            <tr>
+              <td>Aadhar No.:</td>
+              <td>{formData.aadhar}</td>
+            </tr>
+            {/* Add more rows for additional form fields */}
+          </tbody>
+        </table>
       </div>
     );
   } else {
